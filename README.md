@@ -45,6 +45,6 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   ### Reference
 (https://www.jenkins.io/doc/book/installing/docker/)
 
-### Setup Docker an local machine as Jenkins agent
+### Setup Docker on local machine as Jenkins agent
 (https://stackoverflow.com/questions/47709208/how-to-find-docker-host-uri-to-be-used-in-jenkins-docker-plugin)
 
