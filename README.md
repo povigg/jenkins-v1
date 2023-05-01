@@ -3,7 +3,7 @@
 ## Build the Jenkins-BlueOcean Docker Image
 
 ```
-docker build -t myjenkins-blueocean:2.387.2 .
+docker build -t myjenkins-blueocean .
 ```
 
 ## Create bridge network in Docker
@@ -22,7 +22,7 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --publish 8080:8080 --publish 50000:50000 \
   --volume jenkins-data:/var/jenkins_home \
   --volume jenkins-docker-certs:/certs/client:ro \
-  myjenkins-blueocean:2.387.2-1
+  myjenkins-blueocean
   ```
   
   ### On Windows
@@ -33,13 +33,13 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --env DOCKER_CERT_PATH=/certs/client --env DOCKER_TLS_VERIFY=1 `
   --volume jenkins-data:/var/jenkins_home `
   --volume jenkins-docker-certs:/certs/client:ro `
-  --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.387.2-1
+  --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean
   ```
   
   ## Connect to Jenkins
   
   ```
-  https://localhost:8080/
+  http://localhost:8080/
   ```
   
   ## Get Jenkins password
