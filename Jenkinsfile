@@ -5,15 +5,15 @@ pipeline {
             }
       }
     triggers {
-        pollSCM '* * * * *'
+        pollSCM '*/2 * * * *'
     }
     stages {
         stage('Build') {
             steps {
                 echo "Building.."
                 sh '''
-                cd myapp
-                pip install -r requirements.txt
+                cd fireapp
+                pip install -r fireinstall.txt
                 '''
             }
         }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                cd myapp
+                cd fireapp
                 python3 hello.py
                 python3 hello.py --name=Povilas
                 '''
