@@ -36,6 +36,12 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --publish 8080:8080 --publish 50000:50000 myjenkins-blueocean:2.387.2-1
   ```
   
+  ## Connect to Jenkins
+  
+  ```
+  https://localhost:8080/
+  ```
+  
   ## Get Jenkins password
   
   ```
